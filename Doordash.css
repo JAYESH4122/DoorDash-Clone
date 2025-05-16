@@ -54,15 +54,15 @@
     }
   }
 
-  @media (max-width: 480px) {
+  
     .top .citiess{
         border-bottom: 3px solid transparent;
         box-shadow: 0 3px 0 #191919;
         padding-bottom: 12px;
-    }
-  }
 
-  @media (max-width: 480px) {
+  
+
+  
     .top .cuisines{
         border-bottom: 2px solid transparent;
         box-shadow: 0 2px 0 #f1f1f1ff;
@@ -78,12 +78,26 @@
     }
   }
 
-  @media screen and (max-width: 768px){
+  @media (max-width: 480px) {
+    .inside-display-contents{
+      padding: 48px 0px;
+      max-width: 100%;
+      padding: 24px 16px;
+    }
+  }
+
+  @media (max-width: 768px){
     .ad-div h1{
       max-width: 350px;
       letter-spacing: 0px;
       font-size: 22px;
       line-height: 28px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .Doordash-content-inside {
+        max-width: 416px;
     }
   }
 
@@ -140,19 +154,19 @@
     box-sizing: border-box;
   }
   
-    /* Shrink banner on scroll */
-  .app-banner.shrink {
+
+  /* .app-banner.shrink {
     padding: 4px 8px;
     background: #ffffff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   }
 
-  /* Hide text when shrunk */
+  
   .app-banner.shrink .banner-text {
     display: none;
   }
 
-  /* Shrink logo */
+
   .app-banner.shrink .logo {
     width: 40px;
     height: 40px;
@@ -174,14 +188,6 @@
     height: 32px;
   }
   
-  /* Hide initially */
-  .login-btn.hidden {
-    display: none;
-  }
-
-  .app-banner.shrink .login-btn {
-    display: inline-flex;
-  }
   
   .app-banner.shrink .open-btn span {
     content: "Open App";
@@ -195,7 +201,7 @@
     border: none;
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s;
     justify-content: flex-end;
-  }
+  } */
   
 
 
@@ -473,7 +479,7 @@
     color:  #191919ff;
     align-items: center;
     z-index: 1;
-    padding: 6px 24px;
+    padding: 6px 16px;
     border: medium;
     box-shadow: inset 0 0 0 1px #f1f1f1ff;
     background-color: #ffffffff;
@@ -497,6 +503,10 @@
     appearance: none;
     margin: 0px;
     padding: 0px;
+  }
+
+  .address-input input::placeholder{
+    color: rgba(0, 0, 0, 0.596);
   }
 
 
@@ -538,8 +548,8 @@
   background-color: #ffffffff;
   box-shadow: inset 0 0 0 1px #19191900;
   color: var(--usage-color-text-default);
-  height: 40;
-  width: 40;
+  height: 40px;
+  width: 40px;
   padding: 0px;
   -moz-box-align: center;
   align-items: center;
@@ -635,6 +645,8 @@
     padding: 0;
   }
 
+
+
   
   .ad-content .open-ad{
     left: 0px;
@@ -674,6 +686,52 @@
     justify-content: center;
   }
 
+  .open-ad .login-btn-op{
+  position: relative;
+  max-width: 100%;
+  margin-right: 8px;
+  padding: 0px;
+  display: inline-flex;
+  min-height: 32px;
+  width: auto;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: start;
+  justify-content: flex-start;
+  border-radius: 9999px;
+  border: medium;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  text-decoration: none;
+  text-align: center;
+  background-color: #ffffffff;
+  box-shadow: inset 0 0 0 1px #19191900;
+  color: var(--usage-color-text-default);
+  }
+
+  .open-ad .login-btn-op .login-btn-in{
+    display: block;
+    flex-grow: 1;
+    max-width: 100%;
+    transition: opacity 0.15s ease-in-out;
+    opacity: 1;
+    padding: 0px 12px;
+  }
+
+  .open-ad .login-btn-op .login-btn-in span{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-grow: 2;
+  min-width: 0px;
+  display: flex;
+  justify-content: center;
+  }
+
+
   .continue-app{
     max-width: 400px;
     width: 100%;
@@ -710,9 +768,8 @@
     border-radius: var(--usage-border-radius-large);
     border: 1px solid #f1f1f1;
     background-color: #ffffff;
-    margin-right: 9px ;
+    margin-right: 8px ;
     padding: 8px;
-    align-items: flex-start;
   }
 
   .banner-text-modify{
@@ -782,6 +839,10 @@
     text-align: left;
   }
 
+  .stars-prop .img-next{
+    margin-left: 0px !important;
+  }
+
   .stars-prop .rating-text{
     margin-left: 4px !important;
   }
@@ -816,22 +877,21 @@
   }
 
   .Doordash-contents{
-    max-width: 768px;
-    margin: 0px auto;
+    display: contents;
+
   }
 
   .Doordash-content-inside{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: calc(calc(var(--usage-space-xx-small) * 5) * 2) 0;;
+    margin: 0px auto;
+    
   }
 
   .Doordash-content-inside-flex{
     display: flex;
     justify-content: center;
-    height: 100%;
     flex-direction: column;
+    margin: 40px 0px;
+    padding: 8px 8px;
   }
 
   .Become-a-dasher{
@@ -849,15 +909,20 @@
       width: 100%;
       max-width: 250px;
   }
+
+  .Become-a-dasher-content-1{
+    max-width: 100%;
+    display: block;
+  }
   .image-div{
     margin-right: var(--usage-space-x-large);
   }
 
   .Doordash-contents h2{
     color: #191919;
-    font-family: 'medium';
+    font-family: 'bold';
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 599;
     line-height: 40px;
     letter-spacing: var(--usage-type-display-large-letter-spacing);
     text-decoration: none;
@@ -875,7 +940,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: var(--usage-type-label-large-default-line-height);
-    letter-spacing: var(--usage-type-label-large-default-letter-spacing);
+    letter-spacing: -0.01px;
     text-decoration: none;
     text-transform: none;
     text-align: left;
@@ -899,7 +964,7 @@
     color: var(--usage-color-action-primary-default);
     font-family: 'bold', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 599px;
     line-height: 20px;
     letter-spacing: -0.01px;
     text-decoration: none;
@@ -954,12 +1019,13 @@
   }
 
   .content-wrapper h2{
+    font-family: 'bold';
     text-align: left;
     max-width: 90%;
     margin-top: 20px;
     color: var(--usage-color-text-default);
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 599;
     line-height: 28px;
     letter-spacing: var(--usage-type-display-large-letter-spacing);
     text-decoration: none;
@@ -969,12 +1035,12 @@
   }
 
   .content-wrapper .span1 {
-    font-family: 'medium';
+    font-family: 'bold';
     text-align: left;
     margin-top: 10px;
     color: var(--usage-color-text-default);
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 22px;
     letter-spacing: var(--usage-type-display-large-letter-spacing);
     text-decoration: var(--usage-type-label-small-strong-text-decoration);
@@ -1051,13 +1117,13 @@
   }
 
   .mid-banner-contents h2{
-    
+    font-family: 'bold';
     max-width: 90%;
     margin-top: 20px;
     color: var(--usage-color-background-default);
     font-size: 24px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 28px;
     letter-spacing: var(--usage-type-display-large-letter-spacing);
     text-decoration: none;
@@ -1067,13 +1133,14 @@
   }
 
   .mid-banner-contents .span1{
+    font-family: 'medium';
     filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 8px);
     color: white;
-    font-family: 'medium';
+    font-family: 'bold';
     text-align: center;
     margin-top: 10px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 22px;
     letter-spacing: var(--usage-type-display-large-letter-spacing);
     text-decoration: var(--usage-type-label-small-strong-text-decoration);
@@ -1109,6 +1176,7 @@
     padding: 20px;
     min-width: 90%;
     align-items: center;
+    
   }
 
   .helping-heading{
@@ -1121,11 +1189,12 @@
   }
   
   .heading-span{
+    font-family: 'bold';
     text-align: center;
     max-width: 300px;
     color: #191919;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 599;
     line-height: 28px;
     letter-spacing: var(--usage-type-body-medium-default-letter-spacing);
     text-decoration: none;
@@ -1180,6 +1249,32 @@
     letter-spacing: var(--usage-type-display-large-letter-spacing);
   }
 
+  .helping-heading-modify{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 40px 20px 20px;
+    width: 100%;
+  }
+
+  .convenience-ad{
+    width: 100%;
+
+  }
+
+  .convenience-ad-grow{
+    width: 100%;
+  }
+
+  .convenience-ad-grow .convenience-dashpass{
+    padding: 20px;
+    background-color: rgb(254, 241, 238);
+    display: flex;
+    flex-direction: column;
+    min-width: 90%;
+    align-items: center;
+  }
+
   .display-contents{
     display: contents;
   }
@@ -1187,15 +1282,19 @@
   .inside-display-contents{
     width: 100%;
     margin: 0px auto;
+    padding: 48px 0px;
+    max-width: 1130px;
   }
 
+  
   .inside-display-contents h2{
+    font-family: 'bold';
     text-align: center;
     margin-bottom: 20px;
     color: #191919ff;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 22px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
     letter-spacing: var(--usage-type-label-large-default-letter-spacing);
   }
 
@@ -1228,6 +1327,23 @@
     text-align: center;
     background: var(--usage-color-background-default);
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .top  .citiess{
+    font-family: 'medium';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: var(--usage-type-label-small-default-letter-spacing);
+  }
+
+  .top  .cuisines, .chains{
+    color: #606060ff;
+    font-family: 'medium';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: var(--usage-type-label-small-default-letter-spacing);
   }
 
   .top-list{
@@ -1277,9 +1393,9 @@
   .top-list .see-more span{
     margin-right: 8px;
     color: #191919ff;
-    font-family: 'medium';
+    font-family: 'bold';
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 599;
     line-height: 24px;
     letter-spacing: var(--usage-type-display-large-letter-spacing);
     text-decoration: none;
@@ -1529,7 +1645,7 @@
     font-family: 'medium';
     font-size: 12px;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 16px;
     letter-spacing: var(--usage-type-display-large-letter-spacing);
   }
 
@@ -1545,7 +1661,7 @@
   }
 
   .last-footer .language-select{
-    padding: var(--usage-space-small);
+    padding: 0px 12px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1682,4 +1798,34 @@
     color: inherit;
     margin-left: var(--usage-space-small);
   }
+
+  .convenience-dashpass-2{
+  margin-bottom: -300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-width: 90%;
+  -moz-box-align: center;
+  align-items: center;
+  }
+
+  .convenience-dashpass-3{
+  padding: 20px;
+  padding-top: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(254, 241, 238);
+  min-width: 90%;
+  -moz-box-align: center;
+  align-items: center;
+  }
+
+  .helping-scroll{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(254, 241, 238);
+  padding: 40px 20px 20px;
+  width: 100%;
+  }
+  
 
