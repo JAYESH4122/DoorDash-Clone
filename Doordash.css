@@ -29,30 +29,6 @@
     overflow: clip;
   }
 
-  /* .prop{
-    color: var(--usage-color-text-subdued-default);
-    font-family: 'medium';
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.01px;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    text-overflow: ellipsis;
-    max-height: calc(20px * 3);
-    text-transform: none;
-    white-space: normal;
-  } */
-
-
-  @media (max-width: 480px) {
-    .inside-display-contents {
-        max-width: 100%;
-        width: 100%;
-        padding: var(--usage-space-large) var(--usage-space-medium);
-    }
-  }
 
   
     .top .citiess{
@@ -60,7 +36,7 @@
         box-shadow: 0 3px 0 #191919;
         padding-bottom: 12px;
 
-  
+      }
 
   
     .top .cuisines{
@@ -68,38 +44,17 @@
         box-shadow: 0 2px 0 #f1f1f1ff;
         padding-bottom: 12px;
     }
-  }
   
-  @media (max-width: 480px) {
+  
+  
     .top .chains{
         border-bottom: 2px solid transparent;
         box-shadow: 0 3px 0 #f1f1f1ff;
         padding-bottom: 12px;
     }
-  }
+  
 
-  @media (max-width: 480px) {
-    .inside-display-contents{
-      padding: 48px 0px;
-      max-width: 100%;
-      padding: 24px 16px;
-    }
-  }
 
-  @media (max-width: 768px){
-    .ad-div h1{
-      max-width: 350px;
-      letter-spacing: 0px;
-      font-size: 22px;
-      line-height: 28px;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .Doordash-content-inside {
-        max-width: 416px;
-    }
-  }
 
   @font-face {
     font-family: "bold";
@@ -418,9 +373,24 @@
     flex-direction: row;
     align-items: center;
   }
-  .ad-logo .name-logo{
+
+  .ad-logo-768{
+    display: none;
+  }
+
+  .ad-logo-768-in{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+
+  .name-logo{
     margin-left: var(--usage-space-x-small) !important;
   }
+
 
   .ad-h1-div{
     display: flex;
@@ -648,7 +618,7 @@
 
 
   
-  .ad-content .open-ad{
+  .ad-content .open-ad {
     left: 0px;
     right: 0px;
     margin-top: var(--usage-space-medium);
@@ -656,6 +626,7 @@
     align-items: center;
     cursor: pointer;
     position: absolute;
+    display: none;
     display: inline-flex;
     border: none;
     transition: background-color 0.15s 
@@ -664,6 +635,14 @@
     top: 94px;
     margin: 17px 24px 2px 2px;;
   }
+
+  @media (min-width: 768){
+    .ad-content .open-ad{
+    display: none;
+
+  }
+  }
+
 
   .open-ad a{
     font-family: 'bold';
@@ -882,8 +861,8 @@
   }
 
   .Doordash-content-inside{
+    max-width: 785px;  
     margin: 0px auto;
-    
   }
 
   .Doordash-content-inside-flex{
@@ -892,6 +871,13 @@
     flex-direction: column;
     margin: 40px 0px;
     padding: 8px 8px;
+  }
+
+  .Doordash-content-inside-flex-2{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
   }
 
   .Become-a-dasher{
@@ -1828,4 +1814,12 @@
   width: 100%;
   }
   
-
+  .ad-logo-768-in .Doordash-768{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin-left: var(--usage-space-x-small) !important;
+  }
